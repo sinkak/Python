@@ -61,7 +61,7 @@ def host_list(cluster):
 #enabling touchless
 def yinit():
     system_name = os.getenv('HOSTNAME')
-    subprocess.run('/bin/yinit -remote --touchlessSudoTime 240 --touchlessSudoHosts ' + system_name  , shell=True)
+    subprocess.run('/bin/init -remote --touchlessSudoTime 240 --touchlessSudoHosts ' + system_name  , shell=True)
 
 def main():
     parser=argparse.ArgumentParser(usage="""clustercheck {clustername} [-s]""",description="""To check on clusterstatus and each host process status""")
